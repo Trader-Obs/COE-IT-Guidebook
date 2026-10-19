@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IT Guidebook - interactive IT support and troubleshooting assistant</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="title" href="#" id="home">IT Guidebook</a>
+    <span class="tag">Interactive IT support and troubleshooting assistant</span>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- Home: choose a problem -->
+  <section id="home-view">
+    <h1>What is going wrong?</h1>
+    <p class="lead">Choose the problem that looks closest. The guide asks a few yes or no questions and walks you through the fix. If it cannot be fixed here, it tells you what to report to the ICT unit.</p>
+
+    <label class="search" for="q">
+      <span class="sr">Search problems</span>
+      <input id="q" type="search" placeholder="Search, for example: projector, password, slow" autocomplete="off">
+    </label>
+
+    <ul id="tiles" class="tiles"></ul>
+    <p id="none" class="none" hidden>No match. Try another word, or choose the closest problem from the full list.</p>
+  </section>
+
+  <!-- Guide: ask and answer -->
+  <section id="guide-view" hidden>
+    <button class="back" id="allBtn" type="button">&larr; All problems</button>
+    <h1 id="gTitle"></h1>
+
+    <div class="guide">
+      <ol id="trail" class="trail" aria-label="Your steps so far"></ol>
+      <div id="card" class="card" aria-live="polite"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site foot">
+  <div class="wrap">Safe to try: every step here is something a normal user can do. If you are unsure, stop and ask the ICT unit.</div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
